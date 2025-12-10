@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 8 Website - Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About us</a>
+            <a href="announcements.html" class="nav-link">Announcements</a>
+            <a href="subjects.html" class="nav-link">Subjects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-item">
+                    <span class="icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="#" class="sidebar-item" onclick="showAddForm()">
+                    <span class="icon">➕</span>
+                    Add student
+                </a>
+                <a href="#" class="sidebar-item" onclick="document.getElementById('studentsTableBody').scrollIntoView({behavior:'smooth'})">
+                    <span class="icon">📋</span>
+                    View students
+                </a>
+                <a href="announcements.html" class="sidebar-item">
+                    <span class="icon">🔔</span>
+                    Announcements
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="icon">⚙</span>
+                    Settings
+                </a>
+                <a href="index.html" class="sidebar-item">
+                    <span class="icon">🚪</span>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="container">
+                <h1>Student Management Dashboard</h1>
+                
+                <button class="btn btn-add" onclick="showAddForm()">Add New Student</button>
+                
+                <div id="addStudentForm" class="add-student-form" style="display: none;">
+                    <h2>Add New Student</h2>
+                    <form id="studentForm">
+                        <div class="form-group">
+                            <label for="studentName">Name</label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentEmail">Email</label>
+                            <input type="email" id="studentEmail" name="studentEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentReg">Registration number</label>
+                            <input type="text" id="studentReg" name="studentReg" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Add student</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideAddForm()">Cancel</button>
+                    </form>
+                </div>
+
+                <h2>All students</h2>
+                <div class="table-container">
+                    <table class="students-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Reg</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            <!-- Students will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>25RP19338 Level 8 || reversed 2026</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
