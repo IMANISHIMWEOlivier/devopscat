@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 8 Website - Announcements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About us</a>
+            <a href="announcements.html" class="nav-link active">Announcements</a>
+            <a href="subjects.html" class="nav-link">Subjects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Class announcements</h1>
+            <p class="lead">Live updates for the Level 8 Information Technology class. Check this page often for deadlines, schedule changes, and meeting links.</p>
+
+            <div class="cards-grid">
+                <div class="card highlight">
+                    <h2>Week focus</h2>
+                    <p>RESTful APIs and testing. Labs require laptops and Git access.</p>
+                    <span class="badge info">This week</span>
+                </div>
+                <div class="card">
+                    <h2>Next deadline</h2>
+                    <p>Assignment 2 submission closes Friday, 6:00 PM via LMS.</p>
+                    <span class="badge warning">Due Friday</span>
+                </div>
+                <div class="card">
+                    <h2>Support hours</h2>
+                    <p>Office hours: Mon–Thu, 10:00–12:00 (or book a slot via email).</p>
+                    <span class="badge success">Open</span>
+                </div>
+            </div>
+
+            <section>
+                <h2>Latest notices</h2>
+                <div class="announcement-list">
+                    <div class="announcement-item">
+                        <strong>Lab session moved to Room B204</strong>
+                        <p>Please arrive 10 minutes early to set up. Bring your database project files.</p>
+                        <div class="announcement-meta">Posted: Mon | Owner: Lecturer</div>
+                    </div>
+                    <div class="announcement-item">
+                        <strong>Peer study group sign-up</strong>
+                        <p>Form small groups for Week 4 topics. Sign-up sheet is on the Subjects page resources.</p>
+                        <div class="announcement-meta">Posted: Mon | Owner: Class Rep</div>
+                    </div>
+                    <div class="announcement-item">
+                        <strong>Assignment 2 Q&A</strong>
+                        <p>Quick Q&A on Wednesday at 11:45 AM. Submit questions ahead of time through the contact form.</p>
+                        <div class="announcement-meta">Posted: Sun | Owner: Lecturer</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Upcoming dates</h2>
+                <ul class="simple-list">
+                    <li>Wed: Assignment 2 Q&A (11:45 AM)</li>
+                    <li>Thu: Database lab checkpoint (Room B204)</li>
+                    <li>Fri: Assignment 2 submission deadline (6:00 PM)</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Need to reach us fast?</h2>
+                <p>Use the contact page to message the lecturer or the class administrator. Include your registration number for faster help.</p>
+                <a class="btn btn-primary inline" href="contact.html">Go to contact form</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>25RP19338 Level 8 || reversed 2026</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 8 Website - Announcements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About us</a>
+            <a href="announcements.html" class="nav-link active">Announcements</a>
+            <a href="subjects.html" class="nav-link">Subjects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Class Announcements</h1>
+            <p class="lead">Central board for Level 8 IT updates. Check here before every session for schedule, assignment, and room changes.</p>
+
+            <div class="cards-grid">
+                <div class="card highlight">
+                    <h2>Upcoming deadlines</h2>
+                    <ul class="simple-list">
+                        <li><strong>Week 3:</strong> REST API mini-project outline</li>
+                        <li><strong>Week 4:</strong> Database schema draft</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>How this page works</h2>
+                    <p>Announcements posted here are stored locally in your browser for quick reference. Use the form to add notes for yourself or your study group.</p>
+                </div>
+            </div>
+
+            <section class="announcement-board">
+                <div class="board-header">
+                    <h2>Latest announcements</h2>
+                    <button class="btn btn-primary" onclick="showAnnouncementForm()">Post update</button>
+                </div>
+
+                <div id="announcementForm" class="add-student-form" style="display: none;">
+                    <h3>New announcement</h3>
+                    <form id="newAnnouncementForm">
+                        <div class="form-group">
+                            <label for="announcementTitle">Title</label>
+                            <input type="text" id="announcementTitle" name="announcementTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="announcementBody">Details</label>
+                            <textarea id="announcementBody" name="announcementBody" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideAnnouncementForm()">Cancel</button>
+                    </form>
+                </div>
+
+                <div id="announcementsList" class="announcement-list">
+                    <!-- Announcements will render here -->
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Events & rooms</h2>
+                <ul class="simple-list">
+                    <li><strong>Lab:</strong> Mondays, 9:00–10:30 (Lab 2)</li>
+                    <li><strong>Tutorial:</strong> Wednesdays, 9:00–10:30 (Room 3)</li>
+                    <li><strong>Consultation:</strong> Thursdays, 10:00–11:30 (Office)</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>25RP19338 Level 8 || reversed 2026</p>
+    </footer>
+
+    <script src="announcements.js"></script>
+</body>
+</html>
+
